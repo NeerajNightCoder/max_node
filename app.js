@@ -6,5 +6,9 @@ app.use("/", (req, res, next) => {
   res.send(<h1>Hi from Node server</h1>);
 });
 
+app.use("/:id", (req, res) => {
+  res.send(<h1>hi id</h1>);
+});
+
 const server = http.createServer(app);
 server.listen(5000);
