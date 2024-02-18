@@ -9,6 +9,9 @@ app.use("/", (req, res, next) => {
 app.use("/:id", (req, res) => {
   res.send(<h1>hi id</h1>);
 });
+app.use("/products", (req, res) => {
+  res.send(<h1>here are some products</h1>);
+});
 
 const server = http.createServer(app);
 server.listen(5000);
